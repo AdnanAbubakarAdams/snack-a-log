@@ -33,7 +33,7 @@
     /* padding: 1em; */
 /* }  */
 
-Snacks{
+.Snacks{
     display: grid;
     grid-template-areas: 
         "h h h"
@@ -46,7 +46,7 @@ Snacks{
   .items{
     grid-area: s;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 
 
@@ -56,17 +56,17 @@ Snacks{
     list-style: none;
 }
 
-.snack {
+/* .snack {
     /* display: grid; */
-    grid-area: snack;
-    border: 1px solid black;
-    text-align: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    text-align: center;
+    /* grid-area: snack; */
+    /* border: 1px solid black; */
+    /* text-align: center; */
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    /* text-align: center; */
     /* gap: 5px; */
-}
+/* }  */
 
-.snack a {
+.Snack a {
     text-decoration: none;
 }
 

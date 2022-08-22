@@ -13,6 +13,7 @@ import FourOFour from "./pages/FourOFour";
 import Index from "./pages/Index";
 import New from "./pages/New";
 import Show from "./pages/Show";
+import Home from "./pages/Home";
 
 
 
@@ -23,7 +24,7 @@ function App() {
       <Router>
         <NavBar/>
         <Routes>
-          {/* <Route path="/" element={<Snacks/>} /> */}
+          <Route path="/" element={<Home/>} />
           <Route path="/snacks" element={<Index />} />
           <Route path="/snacks/new" element={<New />} />
           <Route path="/snacks/:id" element={<Show />} />

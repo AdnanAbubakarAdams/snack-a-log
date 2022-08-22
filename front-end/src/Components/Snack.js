@@ -15,9 +15,9 @@ const Snack = ({ snack }) => {
         <h4>
         
           {snack.is_healthy ? (
-            <img src={heartSolid} alt="healthy food"  width='50px' height='50px'/>
+            <img src={heartSolid} alt="healthy food"  width='30px' height='30px'/>
           ) : (
-            <img src={heartRegular} alt="unhealthy food"  width='50px' height='50px'/>
+            <img src={heartRegular} alt="unhealthy food"  width='30px' height='30px'/>
           )}
           {snack.name}</h4>
         
