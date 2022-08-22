@@ -17,9 +17,36 @@
    padding: 1em;
 }
 
+.New {
+    background-image: url("../src/assets/allsnack.png");
+}
+
+.Edit {
+    background-image: url("../src/assets/corn2.png");
+    height: 90vh;
+    
+}
+
 .navbar a {
     color: orangered;
     text-decoration: none;
+}
+
+.home {
+    font-size: 3rem;
+    background-image: url("../src/assets/corn3.png");
+    height: 90vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    
+}
+
+.footer {
+    text-align: center;
+    color:azure;
+    background: black;
+    padding: 1px;
 }
 
 /* index-page */
@@ -47,13 +74,20 @@
     grid-area: s;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    padding: 10px;
+    column-gap: 2em;
+    row-gap: 2em;
+    /* border: 1px solid black; */
   }
+
 
 
 
 
 .Snacks li {
     list-style: none;
+    border: 1px solid black;
+    
 }
 
 /* .snack {
@@ -66,13 +100,23 @@
     /* gap: 5px; */
 /* }  */
 
+.Snack {
+    row-gap: 1em;
+    column-gap: 1em;
+}
 .Snack a {
     text-decoration: none;
+    /* row-gap: 1em; */
+    /* column-gap: 1em; */
+    /* gap: 1em; */
 }
 
 /* details/show page */
 .details {
     text-align: center;
+    background-image: url("../src/assets/cheese.png");
+    background-repeat: no-repeat;
+    height: 90vh;
 }
 
 .btn {
@@ -115,4 +159,18 @@ input[type="submit"] {
     margin: 0;
     width: 150px;
     /* padding: 10px; */
+}
+
+.btn1 {
+    background: orangered;
+    color: white;
+}
+.btn2 {
+    background: rgb(10, 214, 10);
+    color: white;
+}
+
+.btn3 {
+    background: red;
+    color: white;
 }

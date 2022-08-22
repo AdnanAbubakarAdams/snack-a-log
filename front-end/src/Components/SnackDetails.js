@@ -51,16 +51,16 @@ const SnackDetails = () => {
       <div className="btn">
         <div>
           <Link to="/snacks">
-            <button>Back</button>
+            <button className="btn1">Back</button>
           </Link>
         </div>
         <div>
           <Link to={`/snacks/${id}/edit`}>
-            <button>Edit</button>
+            <button className="btn2">Edit</button>
           </Link>
         </div>
         <div>
-          <button onClick={handleDelete}>Delete</button>
+          <button className="btn3" onClick={handleDelete}>Delete</button>
         </div>
       </div>
     </div>

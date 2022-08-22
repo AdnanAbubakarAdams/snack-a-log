@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // COMPONENTS
 import NavBar from "./Components/NavBar";
+import Footer from "./Components/Footer";
 // import SnackDetails from "./Components/SnackDetails";
 // import NewSnack from "./Components/NewSnack";
 // import Snacks from "./Components/Snacks";
@@ -31,6 +32,7 @@ function App() {
           <Route path="/snacks/:id/edit" element={<Edit />} />
           <Route path="*" element={<FourOFour />} />
         </Routes>
+        <Footer />
       </Router>
     </div>
   );
