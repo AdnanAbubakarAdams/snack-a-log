@@ -9,13 +9,14 @@ const Snacks = () => {
 
     useEffect(() => {
         axios.get(`${API}/snacks`)
-        .then((response) => setSnacks(response.data))
+        .then((response) => setSnacks(response.data.payload))
         .catch((c) => console.warn("catch", c));
     }, []);
 
 
   return (
-    <ul>
+    <div className='Snacks'>
+    <ul className='items'>
         {snacks.map((snack) => {
             return (
                 <li>
@@ -24,6 +25,7 @@ const Snacks = () => {
             )
         })}
     </ul>
+    </div>
   )
 }
 

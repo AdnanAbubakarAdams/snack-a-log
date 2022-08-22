@@ -5,7 +5,7 @@ import NewSnack from '../Components/NewSnack';
 const New = () => {
   return (
     <div>
-        <h2>New Page</h2>
+        <h2>Create A New Snack</h2>
         <NewSnack />
     </div>
   )

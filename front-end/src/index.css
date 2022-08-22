@@ -1,0 +1,118 @@
+* {
+    font-family: 'PT Sans', sans-serif;
+    margin: 0;
+    text-align: center;
+}
+
+/* body{
+    padding: 1em;
+} */
+/* nav-bar */
+.navbar {
+   display: flex; 
+   justify-content: space-between;
+   background: #000;
+   align-items: center;
+   /* margin-left: ; */
+   padding: 1em;
+}
+
+.navbar a {
+    color: orangered;
+    text-decoration: none;
+}
+
+/* index-page */
+/* .Snacks {
+    display: grid;
+    grid-template-areas:
+    "snack snack snack snack";
+    justify-content: space-evenly;
+    gap: 10px;
+    /* margin-left: 10px; */
+    /* padding: 1em; */
+/* }  */
+
+Snacks{
+    display: grid;
+    grid-template-areas: 
+        "h h h"
+        "s s s"
+        "s s s"
+        "s s s"
+        ;
+  }
+
+  .items{
+    grid-area: s;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+
+
+
+.Snacks li {
+    list-style: none;
+}
+
+.snack {
+    /* display: grid; */
+    grid-area: snack;
+    border: 1px solid black;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    /* gap: 5px; */
+}
+
+.snack a {
+    text-decoration: none;
+}
+
+/* details/show page */
+.details {
+    text-align: center;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+
+/* edit-page */
+.Edit {
+    text-align: center;
+}
+
+/* .Edit form {
+    /* margin: auto; */
+    /* width:; */
+    /* height: 50%; */
+/* } */ 
+
+/* new-form */
+.New {
+    text-align: center;
+}
+
+/* inputs */
+input[type="text"] {
+    margin: 0;
+    width: 300px;
+    padding: 5px;
+}
+
+input[type="number"] {
+    margin: 0;
+    width: 300px;
+    padding: 5px;
+}
+
+input[type="submit"] {
+    margin: 0;
+    width: 150px;
+    /* padding: 10px; */
+}

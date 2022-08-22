@@ -13,7 +13,7 @@ const SnackDetails = () => {
 
   useEffect(() => {
     axios.get(`${API}/snacks/${id}`).then((response) => {
-      setSnack(response.data);
+      setSnack(response.data.payload);
     });
   }, [id, navigate, API]);
 
@@ -31,33 +31,36 @@ const SnackDetails = () => {
   };
   return (
     <div>
-      <article>
-        <span>
+      <article className="details">
+        <aside>
           {snack.is_healthy ? (
-            <img src={heartSolid} alt="" />
+            <img src={heartSolid} alt="healthy food" />
           ) : (
-            <img src={heartRegular} alt="" />
+            <img src={heartRegular} alt="unhealthy food" />
           )}
           <h4>{snack.name}</h4>
+          </aside>
+          <div>
           <img src={snack.image} alt={snack.name} />
-        </span>
+        
         <h5>Protein: {snack.protein}</h5>
         <h5>Fiber: {snack.fiber}</h5>
         <h5>Added Sugar: {snack.added_sugar}</h5>
+        </div>
       </article>
-      <div>
+      <div className="btn">
         <div>
           <Link to="/snacks">
-            <button>BACK</button>
+            <button>Back</button>
           </Link>
         </div>
         <div>
           <Link to={`/snacks/${id}/edit`}>
-            <button>EDIT</button>
+            <button>Edit</button>
           </Link>
         </div>
         <div>
-          <button onClick={handleDelete}>DELETE</button>
+          <button onClick={handleDelete}>Delete</button>
         </div>
       </div>
     </div>

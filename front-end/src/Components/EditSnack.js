@@ -35,7 +35,7 @@ const EditSnack = () => {
 
     useEffect(() => {
         axios.get(`${API}/snacks/${id}`)
-        .then((response) => setSnack(response.data),
+        .then((response) => setSnack(response.data.payload),
         (error) => navigate(`/not-found`)
         )
         
@@ -48,9 +48,10 @@ const EditSnack = () => {
 
 
   return (
-    <div>
+    <div className="Edit">
         <form onSubmit={handleSubmit}>
-            <labe htmlFor="name">Name:</labe>
+            <label htmlFor="name">Name:</label>
+            <br/>
             <input 
             id="name" 
             value={snack.name} 
@@ -59,7 +60,9 @@ const EditSnack = () => {
             placeholder="Name"
             required
             />
-            <labe htmlFor="image">Image:</labe>
+            <br/>
+            <label htmlFor="image">Image:</label>
+            <br/>
             <input 
             id="image" 
             value={snack.image} 
@@ -68,7 +71,9 @@ const EditSnack = () => {
             placeholder="http://"
             required
             />
-            <labe htmlFor="fiber">Fiber:</labe>
+            <br/>
+            <label htmlFor="fiber">Fiber:</label>
+            <br/>
             <input 
             id="fiber" 
             value={snack.fiber} 
@@ -77,7 +82,9 @@ const EditSnack = () => {
             // placeholder="http://"
             // required
             />
-            <labe htmlFor="protein">Protein:</labe>
+            <br/>
+            <label htmlFor="protein">Protein:</label>
+            <br/>
             <input 
             id="protein" 
             value={snack.protein} 
@@ -86,7 +93,9 @@ const EditSnack = () => {
             // placeholder="http://"
             // required
             />
-            <labe htmlFor="added_sugar">Added Sugar:</labe>
+            <br/>
+            <label htmlFor="added_sugar">Added Sugar:</label>
+            <br/>
             <input 
             id="added_sugar" 
             value={snack.added_sugar} 
@@ -95,6 +104,7 @@ const EditSnack = () => {
             // placeholder="http://"
             // required
             />
+            <br/>
             <br/>
             <input type="submit"/>
 

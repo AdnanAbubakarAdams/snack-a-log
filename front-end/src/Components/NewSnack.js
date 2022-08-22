@@ -36,9 +36,10 @@ const NewSnack = () => {
         addSnack(snack)
     }
   return (
-    <div>
+    <div className='New'>
         <form onSubmit={handleSubmit}>
-            <labe htmlFor="name">Name:</labe>
+            <label htmlFor="name">Name:</label>
+            {/* <br/> */}
             <input 
             id="name" 
             value={snack.name} 
@@ -47,7 +48,9 @@ const NewSnack = () => {
             placeholder="Name"
             required
             />
-            <labe htmlFor="image">Image:</labe>
+            <br/>
+            <label htmlFor="image">Image:</label>
+            {/* <br/> */}
             <input 
             id="image" 
             value={snack.image} 
@@ -56,7 +59,9 @@ const NewSnack = () => {
             placeholder="http://"
             required
             />
-            <labe htmlFor="fiber">Fiber:</labe>
+            <br/>
+            <label htmlFor="fiber">Fiber:</label>
+            {/* <br/> */}
             <input 
             id="fiber" 
             value={snack.fiber} 
@@ -65,7 +70,9 @@ const NewSnack = () => {
             // placeholder="http://"
             // required
             />
-            <labe htmlFor="protein">Protein:</labe>
+            <br/>
+            <label htmlFor="protein">Protein:</label>
+            {/* <br/> */}
             <input 
             id="protein" 
             value={snack.protein} 
@@ -74,7 +81,9 @@ const NewSnack = () => {
             // placeholder="http://"
             // required
             />
-            <labe htmlFor="added_sugar">Added Sugar:</labe>
+            <br/>
+            <label htmlFor="added_sugar">Added Sugar:</label>
+            <br/>
             <input 
             id="added_sugar" 
             value={snack.added_sugar} 
@@ -83,6 +92,7 @@ const NewSnack = () => {
             // placeholder="http://"
             // required
             />
+            <br/>
             <br/>
             <input type="submit"/>
 
