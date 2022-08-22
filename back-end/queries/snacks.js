@@ -21,12 +21,26 @@ const getSnack = async (id) => {
 };
 
 // QUERY TO CREATE A SNACK
-const createSnack = async (snack) => {
-  const { name, fiber, protein, added_sugar, is_healthy, image } = snack;
+const createSnack = async (name, fiber, protein, added_sugar, isHealthy, image) => {
+  // const { name, fiber, protein, added_sugar, is_healthy, image } = snack;
+  let lowercaseName = name.toLowerCase().split(" ")
+  let snackName = lowercaseName.map((low) => {
+    if (low.length > 2) {
+      return low.charAt(0).toUpperCase() + low.substring(1)
+    } else {
+      return low;
+    }
+  }).join(" ")
+
+  // DEFAULT IMAGE
+  if(!image) {
+    image = "https://dummyimage.com/400x400/6e6c6e/e9e9f5.png&text=No+Image"
+  }
+
   try {
     const newSnack = await db.one(
       "INSERT INTO snacks (name, fiber, protein, added_sugar, is_healthy, image) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *",
-      [name, fiber, protein, added_sugar, is_healthy, image]
+      [name, fiber, protein, added_sugar, isHealthy, image]
     );
     return newSnack;
   } catch (error) {
@@ -45,11 +59,26 @@ const deleteSnack = async (id) => {
 }
 
 // QUERY TO UPDATE A SNACK 
-const updateSnack = async (snack, id) => {
-    const { name, fiber, protein, added_sugar, is_healthy, image } = snack;
+const updateSnack = async (id, name, fiber, protein, added_sugar, isHealthy, image) => {
+    // const { name, fiber, protein, added_sugar, is_healthy, image } = snack;
+    let lowercaseName = name.toLowerCase().split(" ")
+  let snackName = lowercaseName.map((low) => {
+    if (low.length > 2) {
+      return low.charAt(0).toUpperCase() + low.substring(1)
+    } else {
+      return low;
+    }
+  }).join(" ")
+
+  // DEFAULT IMAGE
+  if(!image) {
+    image = "https://dummyimage.com/400x400/6e6c6e/e9e9f5.png&text=No+Image"
+  }
+
+  
     try {
         const updatedSnack = await db.one("UPDATE snacks SET name = $1, fiber = $2, protein = $3, added_sugar = $4, is_healthy = $5, image = $6 WHERE id = $7 RETURNING *",
-        [name, fiber, protein, added_sugar, is_healthy, image, id])
+        [name, fiber, protein, added_sugar, isHealthy, image, id])
         return updatedSnack;
     } catch (err) {
         return err;
